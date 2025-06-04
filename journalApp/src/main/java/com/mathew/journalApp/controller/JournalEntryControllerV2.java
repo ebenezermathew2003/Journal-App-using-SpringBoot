@@ -48,9 +48,10 @@ public class JournalEntryControllerV2 {
         JournalEntry old=journalEntryService.findById(id).orElse(null);
         if(old != null)
         {
-            old.setTitle(newEntry.getTitle() != null && !newEntry.getTitle().equals(" ")?newEntry.getTitle():old.getTitle());
-            old.setContent(newEntry.getContent()!=null && !newEntry.equals(" ") ? newEntry.getContent():old.getContent());
+            old.setTitle(newEntry.getTitle() != null && !newEntry.getTitle().equals("") ? newEntry.getTitle():old.getTitle());
+            old.setContent(newEntry.getContent()!=null && !newEntry.equals("") ? newEntry.getContent():old.getContent());
         }
+        journalEntryService.saveEntry(old);
         return null;
     }
 }
