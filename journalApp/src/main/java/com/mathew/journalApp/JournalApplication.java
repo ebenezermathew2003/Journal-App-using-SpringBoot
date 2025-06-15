@@ -16,10 +16,10 @@ public class JournalApplication {
 		SpringApplication.run(JournalApplication.class, args);
 	}
 	@Bean
-		public PlatformTransactionManager falana(MongoDatabaseFactory dbFactory)
-		{
-			return new MongoTransactionManager(dbFactory);
-		}
+	public PlatformTransactionManager falana(MongoDatabaseFactory dbFactory) {
+		return new MongoTransactionManager(dbFactory);
+	}
 
 
 }
+
