@@ -1,8 +1,6 @@
 package com.mathew.journalApp.service;
 
-import com.mathew.journalApp.entity.JournalEntry;
 import com.mathew.journalApp.entity.User;
-import com.mathew.journalApp.repository.JournalEntryRepository;
 import com.mathew.journalApp.repository.UserRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +26,7 @@ public class UserService {
     {
         return userRepository.findById(id);
     }
-    public void deleteById(ObjectId id)
-    {
-        userRepository.deleteById(id);
-    }
+
     public User findByUserName(String userName)
     {
         return userRepository.findByUserName(userName);
